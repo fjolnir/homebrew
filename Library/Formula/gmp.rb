@@ -17,7 +17,7 @@ class Gmp < Formula
     # FIXME convert this to appropriate fails_with annotations
     ENV.gcc if MacOS::Xcode.provides_gcc?
 
-    args = %W[--prefix=#{prefix} --enable-cxx]
+    args = %W[--prefix=#{prefix} --enable-cxx --with-pic]
 
     # Build 32-bit where appropriate, and help configure find 64-bit CPUs
     # see: http://gmplib.org/macos.html
